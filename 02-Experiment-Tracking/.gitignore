@@ -1,0 +1,8 @@
+*.db
+data/
+models/
+homework/TAXI_DATA_FOLDER
+homework/output
+homework/*.db
+homework/mlartifacts
+homework/mlruns
