@@ -12,8 +12,6 @@
 
 Course Data: [Green NYC GOV January - February 2021](https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page)
 
-Homework Data: [Yellow NYC GOV January - February 2022](https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page)
-
 # MLOps Maturity 
 
 reference: [MLOps Maturity Model - Microsoft](https://learn.microsoft.com/en-us/azure/architecture/example-scenario/mlops/mlops-maturity-model#:~:text=The%20MLOps%20maturity%20model%20helps%20clarify%20the%20Development,existing%20organization%27s%20attempt%20to%20implement%20such%20an%20environment.)

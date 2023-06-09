@@ -6,3 +6,8 @@ homework/output
 homework/*.db
 homework/mlartifacts
 homework/mlruns
+weight-biases/wandb_env
+weight-biases/homework/data
+weight-biases/homework/artifacts
+weight-biases/homework/output
+weight-biases/homework/wandb
