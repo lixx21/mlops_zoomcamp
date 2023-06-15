@@ -56,7 +56,7 @@
 
 THEN on CLI
 
-```prefect worker start -p my-pool -t process```
+```prefect worker start -p zoompool -t process```
 
 ### 5. Deploy your flow
 
