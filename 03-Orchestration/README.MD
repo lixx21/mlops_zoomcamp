@@ -26,3 +26,50 @@
 4. When you see ```Prefect API URL```, you have to copy the url and apply to our Prefect configuration use this command: in new terminal ```prefect config set PREFECT_API_URL=http://127.0.0.1:4200/api```. **Doing this will ensure that we send our workflow metadata to the server's UI**.
 5. Run python's script that already contain with all Prefect terminologies (in this case you can test scripst in folder 3.2)
 6. Click the dashboard URL to see Prefect's UI
+
+## Deploying Workflow
+
+&nbsp;&nbsp;&nbsp;&nbsp;We can also make a deployment that will live on a server and it will allow us to do things like **scheduling** and **colaboration** with other folks for example if you are using a Prefect cloud. The first thing that we need to do is to make sure that our project is already on github, then we can simply do:
+
+### 1. Initialize prefect project
+&nbsp;&nbsp;&nbsp;&nbsp;Type ```Prefect project init``` on command and this will going to create 4 files
+
+1. ```.prefectignore```
+2. ```deployment.yaml``` this is useful for template if you are making a multiple deployments from one project
+3. ```prefect.yaml``` 
+4. ```.prefect/``` 
+
+### 2. Add @flow and other decorators in your code
+&nbsp;&nbsp;&nbsp;&nbsp;Add an @flow decorator to your code entrypoint function, give it a name.
+
+### 3. Orchestration environment
+&nbsp;&nbsp;&nbsp;&nbsp;Login to Prefect cloud or Start an open source server
+
+```prefect cloud login``` to login in cloud
+
+```prefect server start ``` to start an open source prefect server
+
+### 4. Execution environment
+&nbsp;&nbsp;&nbsp;&nbsp;Start a worker that polls your work pool using this command:
+
+```prefect worker start -p my-pool -t process```
+
+### 5. Deploy your flow
+
+```prefect deploy <your python script>:<function name where flow is decorator> -n 'my-deployment' -p my-pool```
+
+In this case the example like this:
+
+```prefect deploy orchestrate.py:main_flow -n taxi1 -p zoompool```
+
+### 6. Start and run a deployment flow on CLI
+
+```prefect deployment run Hello/my-deployment```
+
+&nbsp;&nbsp;&nbsp;&nbsp;When this actually happens, we will have the trigger set for this deployment to actually run and it will create our flow run. We will submit that to the work pool and our worker that is on our execution environment will be polling for that work and we will pick it up and start kick it off by setting up the infrastructure that has been specified in our project steps and the the worker will start our flow run with our configuration
+
+```
+NOTE:
+
+    if you want to deploy and you have data, please make sure that you are already push your data into github. Because if you want to deploy and prefect cannot find the data in your github, then the process will fail
+```
