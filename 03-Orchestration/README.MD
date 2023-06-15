@@ -52,6 +52,10 @@
 ### 4. Execution environment
 &nbsp;&nbsp;&nbsp;&nbsp;Start a worker that polls your work pool using this command:
 
+```Create pool in UI```
+
+THEN on CLI
+
 ```prefect worker start -p my-pool -t process```
 
 ### 5. Deploy your flow
