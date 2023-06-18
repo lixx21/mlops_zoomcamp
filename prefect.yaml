@@ -1,7 +1,7 @@
 # File for configuring project / deployment build, push and pull steps
 
 # Generic metadata about this project
-name: '3.4'
+name: mlops_zoomcamp
 prefect-version: 2.10.8
 
 # build section allows you to manage and build docker images

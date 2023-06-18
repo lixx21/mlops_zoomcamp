@@ -47,7 +47,7 @@
 
 ```prefect cloud login``` to login in cloud
 
-```prefect server start ``` to start an open source prefect server
+```prefect server start``` to start an open source prefect server
 
 ### 4. Execution environment
 &nbsp;&nbsp;&nbsp;&nbsp;Start a worker that polls your work pool using this command:
