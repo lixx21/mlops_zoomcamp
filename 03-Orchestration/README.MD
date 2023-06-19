@@ -1,3 +1,7 @@
+# HOMEWORK
+
+For homework, my data and all init for deployment can be found in the root directory of this github. Because prefect will only get th data from the root directory of your github.
+
 # Orchestration and ML Pipelines
 
 &nbsp;&nbsp;&nbsp;&nbsp;Prefect is an orchestration tools for python or Machine Learning tasks especially for ML Pipelines. The reason why we used prefect is: 
@@ -77,3 +81,27 @@ NOTE:
 
     if you want to deploy and you have data, please make sure that you are already push your data into github. Because if you want to deploy and prefect cannot find the data in your github, then the process will fail
 ```
+
+&nbsp;&nbsp;&nbsp;&nbsp;in [3.5 folder](/3.5), you can see there is a script named ```create_s3_bucket_block.py``` that will create block and bucket in Prefect. This script required your ```aws_access_key_id``` and ```aws_secret_access_key``` that you can obtain when you have created ```users IAM``` on AWS. 
+
+You can see block in Prefect using this command on your cli 
+
+```prefect bloack ls```. 
+
+You can also send this block to the server. This will registered all the blocks and now the server knows that block type is exist, and we can go to the **prefect UI** and create aws block right there. Simply using this command:
+
+```prefect block register -m prefect_aws```
+
+## Create Markdown Artifact
+
+&nbsp;&nbsp;&nbsp;&nbsp;This markdown artifact can help us to see our prediction model everyday therefore people can easily detect our model peformance every day. To do this, you can see in [orchestrate_s3.py](3.5/orchestrate_s3.py) 
+
+```
+REMEMBER
+
+When you run with load bucket, your folder in that bucket will be stored in your local so make sure you delete or rename the folder that has same name with folder name in bucket on your AWS
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;Then after you run that file, you can see in artifact list at [Prefect UI - Artifact](http://127.0.0.1:4200/artifacts/key/duration-model-report)
+
+## Multiple Deployment in Prefect
