@@ -11,3 +11,5 @@ All Homework Data: [NYC TRIP DATA](https://www.nyc.gov/site/tlc/about/tlc-trip-r
 &nbsp;&nbsp;&nbsp;&nbsp;In this module I learned about how to track our experiment as a data scientist and machine learning engineer. Sometimes as a data scientist we do many of experiments before we get the best model, and we need to tracking those environments, therefore we use ```mlflow``` or ```weight and biases``` to help us tracking our environment an analyzed our experiment (accuracy, RMSE, parameters and so on)
 
 ## [03-Orchestation](/03-Orchestration/)
+
+```data``` ```.prefectignore``` ```deployment.yaml``` ```mlflow.db``` ```prefect.yaml``` are the dapendencies for prefect deployment using Github, because when we want to deploy Prefect using data, prefect will see the directory from root directory of github. That is why I put all dependencies in main root directory of my github
