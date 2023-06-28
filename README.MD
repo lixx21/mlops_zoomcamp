@@ -12,4 +12,4 @@ All Homework Data: [NYC TRIP DATA](https://www.nyc.gov/site/tlc/about/tlc-trip-r
 
 ## [03-Orchestation](/03-Orchestration/)
 
-```data``` ```.prefectignore``` ```deployment.yaml``` ```mlflow.db``` ```prefect.yaml``` are the dapendencies for prefect deployment using Github, because when we want to deploy Prefect using data, prefect will see the directory from root directory of github. That is why I put all dependencies in main root directory of my github
+&nbsp;&nbsp;&nbsp;&nbsp;In this module, I learned about how to use **Prefect** a orchestration tool for MLOps, where we can see our model's peformance every day or schedule our run deployment. To deploy this Prefect we need to push our script to Github. ```data``` ```.prefectignore``` ```deployment.yaml``` ```mlflow.db``` ```prefect.yaml``` and ```mlruns/``` are the dapendencies for prefect deployment using Github, because when we want to deploy Prefect using data, prefect will see the directory from root directory of github. That is why I put all dependencies in main root directory of my github. You can see more of Prefect on [Prefect - Docs](https://docs.prefect.io/2.10.15/)
